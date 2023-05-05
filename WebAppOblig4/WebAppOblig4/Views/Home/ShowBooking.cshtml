@@ -1,0 +1,15 @@
+﻿@model WebAppOblig4.Models.Customer
+
+<div class="container">
+    <div class="row justify-content-around">
+        <h4> Dine Bestillinger</h4>
+        @foreach (Booking booking in @Model.Bookings)
+        {
+                <div class="card-body">
+                <p class="card-text"><strong>Room Type:</strong> @booking.RoomType</p>
+                <p class="card-text"><strong>Check-In Date:</strong> @booking.CheckinDate.ToShortDateString()</p>
+                <p class="card-text"><strong>Check-Out Date:</strong> @booking.CheckoutDate.ToShortDateString()</p>
+                </div> 
+        }
+    </div>
+</div>
